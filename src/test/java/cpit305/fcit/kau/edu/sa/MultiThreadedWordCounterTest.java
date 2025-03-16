@@ -76,10 +76,6 @@ class MultiThreadedWordCounterTest {
         Exception exception = assertThrows(IOException.class, () -> {
             MultiThreadedWordCounter.countWords("non_existent_file.txt", 2);
         });
-
-        assertTrue(exception.getMessage().contains("non_existent_file.txt") ||
-                        exception instanceof IOException,
-                "Should throw IOException for non-existent file");
     }
 
     @Test
